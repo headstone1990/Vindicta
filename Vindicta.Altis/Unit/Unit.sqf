@@ -409,9 +409,6 @@ CLASS("Unit", "Storable")
 						_objectHandle setSkill ["spotDistance", vin_aiskill_global * vin_aiskill_spotDistance];
 						_objectHandle setSkill ["spotTime", vin_aiskill_global * vin_aiskill_spotTime];
 
-						// make it impossible to ace interact with this unit, may need better solution in the future
-						[_objectHandle, _objectHandle] call ace_common_fnc_claim;
-
 						// Set unit insignia
 						// todo find a better way to handle this?
 						if (side _groupHandle == CALLM0(gGameMode, "getPlayerSide")) then {
