@@ -410,9 +410,7 @@ CLASS("Unit", "Storable")
 						_objectHandle setSkill ["spotTime", vin_aiskill_global * vin_aiskill_spotTime];
 
 						// make it impossible to ace interact with this unit, may need better solution in the future
-						if (side _objectHandle != west) then {
-							[_objectHandle, _objectHandle] call ace_common_fnc_claim;
-						};
+						[_objectHandle, _objectHandle] call ace_common_fnc_claim;
 
 						// Set unit insignia
 						// todo find a better way to handle this?
