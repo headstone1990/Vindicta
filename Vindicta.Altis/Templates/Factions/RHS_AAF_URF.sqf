@@ -49,13 +49,13 @@ _inf set [T_INF_pilot_heli, ["RHS_AAF_URF_helipilot"]];
 //_inf set [T_INF_unarmed, [""]];
 
 // Recon
-_inf set [T_INF_recon_TL, ["RHS_AAF_URF_recon_TL"]];
-_inf set [T_INF_recon_rifleman, ["RHS_AAF_URF_recon_LMG"]];
-_inf set [T_INF_recon_medic, ["RHS_AAF_URF_recon_medic"]];
-_inf set [T_INF_recon_exp, ["RHS_AAF_URF_recon_explosives"]];
-_inf set [T_INF_recon_LAT, ["RHS_AAF_URF_recon_LAT"]];
-_inf set [T_INF_recon_marksman, ["RHS_AAF_URF_recon_sniper", "RHS_AAF_URF_recon_sniper_2"]];
-_inf set [T_INF_recon_JTAC, ["RHS_AAF_URF_recon_JTAC"]];
+_inf set [T_INF_recon_TL, ["RHS_AAF_U2020recon_TL"]];
+_inf set [T_INF_recon_rifleman, ["RHS_AAF_2020_recon_LMG"]];
+_inf set [T_INF_recon_medic, ["RHS_AAF_2020_recon_medic"]];
+_inf set [T_INF_recon_exp, ["RHS_AAF_2020_recon_explosives"]];
+_inf set [T_INF_recon_LAT, ["RHS_AAF_2020_recon_LAT"]];
+_inf set [T_INF_recon_marksman, ["RHS_AAF_2020_recon_sniper", "RHS_AAF_2020_recon_sniper_2"]];
+_inf set [T_INF_recon_JTAC, ["RHS_AAF_2020_recon_JTAC"]];
 
 
 // Divers, still vanilla

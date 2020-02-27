@@ -8,6 +8,8 @@ call compile preprocessFileLineNumbers "Templates\Loadouts\RHS_AAF\AAF_2010_reco
 //AAF_2020
 call compile preprocessFileLineNumbers "Templates\Loadouts\RHS_AAF\AAF_2020\init.sqf";
 call compile preprocessFileLineNumbers "Templates\Loadouts\RHS_AAF\AAF_2020_recon\init.sqf";
+//AAF_URF
+call compile preprocessFileLineNumbers "Templates\Loadouts\RHS_AAF\AAF_URF\init.sqf";
 //AAF_police
 call compile preprocessFileLineNumbers "Templates\Loadouts\RHS_AAF\AAF_police\init.sqf";
 //RHS_LDF
