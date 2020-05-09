@@ -352,6 +352,7 @@ CLASS("Unit", "Storable")
 				switch(_catID) do {
 					case T_INF: {
 						private _groupHandle = CALLM0(_group, "getGroupHandle");
+						private _subcatID = _data select UNIT_DATA_ID_SUBCAT;
 						if (isNull _groupHandle) exitWith {
 							OOP_ERROR_1("Spawn: group handle is null (_data = %1)!", _data);
 							// Mark it as dead?
@@ -413,6 +414,9 @@ CLASS("Unit", "Storable")
 						// todo find a better way to handle this?
 						if (side _groupHandle == CALLM0(gGameMode, "getPlayerSide")) then {
 							[_objectHandle, "Vindicta"] call BIS_fnc_setUnitInsignia;
+						};
+						if (_subcatID == T_INF_medic) then {
+							_objectHandle setVariable ["ace_medical_medicclass",1, true];
 						};
 					};
 					case T_VEH: {
