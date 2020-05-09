@@ -1518,6 +1518,7 @@ CLASS("Unit", "Storable")
 				_hO selectWeapon _type;
 			};
 		};
+		_hO addItemToUniform "FirstAidKit";
 
 	} ENDMETHOD;
 
