@@ -1,5 +1,5 @@
 #include "common.hpp"
-
+FIX_LINE_NUMBERS()
 /*
 Author: Sparker
 Unit will dismount his vehicle if he's in one, walk to a vehicle and repair it.
@@ -9,6 +9,7 @@ parameters: "vehicle" - <Unit> of the vehicle that needs repairs
 
 #define pr private
 
+#define OOP_CLASS_NAME GoalUnitRepairVehicle
 CLASS("GoalUnitRepairVehicle", "Goal")
 
 	// ----------------------------------------------------------------------
@@ -17,7 +18,7 @@ CLASS("GoalUnitRepairVehicle", "Goal")
 	// By default it gets predefined action from database if it is defined and creates it, passing a goal parameter to action parameter, if it exists
 	// This method must be redefined for goals that have predefined actions that require parameters not from goal parameters
 
-	/* virtual */ STATIC_METHOD("createPredefinedAction") {
+	/* virtual */ STATIC_METHOD(createPredefinedAction)
 		params [P_THISCLASS, P_OOP_OBJECT("_AI"), P_ARRAY("_parameters")];
 
 		pr _vehicleUnit = CALLSM2("Action", "getParameterValue", _parameters, "vehicle");
@@ -55,6 +56,6 @@ CLASS("GoalUnitRepairVehicle", "Goal")
 
 		_actionSerial
 
-	} ENDMETHOD;
+	ENDMETHOD;
 
 ENDCLASS;

@@ -8,6 +8,7 @@ Not really meant for simulations for now.
 Parent: <CmdrAction>
 */
 
+#define OOP_CLASS_NAME DirectMoveCmdrAction
 CLASS("DirectMoveCmdrAction", "CmdrAction")
 
 	// ID of the garrison
@@ -22,17 +23,15 @@ CLASS("DirectMoveCmdrAction", "CmdrAction")
 
 	// _garrID - the ID of the garrison to move
 	// _target - target variable
-	METHOD("new") {
-		PARAMS[P_THISOBJECT, P_NUMBER("_garrID"), P_ARRAY("_target"), ["_radius", 100] ];
+	METHOD(new)
+		PARAMS[P_THISOBJECT, P_NUMBER("_garrID"), P_ARRAY("_target"), ["_radius", 5] ];
 
 		T_SETV("garrId", _garrID);
 		T_SETV("target", _target);
 		T_SETV("radius", _radius);
+	ENDMETHOD;
 
-
-	} ENDMETHOD;
-
-	/* protected override */ METHOD("createTransitions") {
+	/* protected override */ METHOD(createTransitions)
 		params [P_THISOBJECT];
 
 		private _garrId = T_GETV("garrId");
@@ -57,11 +56,11 @@ CLASS("DirectMoveCmdrAction", "CmdrAction")
 				CMDR_ACTION_STATE_END, 				// State change when target is dead
 				_garrIdVar, 						// Id of garrison to move
 				_targetVar, 						// Target to move to (various target types are supported by this AST)
-				T_CALLM1("createVariable", 150)]; 				// Radius to move within !!! todo improve this,  
+				T_CALLM1("createVariable", T_GETV("radius"))]; 	// Radius to move within !!! todo improve this,  
 		private _moveAST = NEW("AST_MoveGarrison", _moveAST_Args);
 
 		[_assignAST, _moveAST]
-	} ENDMETHOD;
+	ENDMETHOD;
 
 	/*
 	Method: (virtual) getRecordSerial
@@ -71,7 +70,7 @@ CLASS("DirectMoveCmdrAction", "CmdrAction")
 	Parameters:	
 		_world - <Model.WorldModel>, real world model that is being used.
 	*/
-	/* virtual override */ METHOD("getRecordSerial") {
+	/* virtual override */ METHOD(getRecordSerial)
 		params [P_THISOBJECT, P_OOP_OBJECT("_garModel"), P_OOP_OBJECT("_world")];
 
 		// Create a record
@@ -108,6 +107,6 @@ CLASS("DirectMoveCmdrAction", "CmdrAction")
 
 		// Return the serialized data
 		_serial
-	} ENDMETHOD;
+	ENDMETHOD;
 
 ENDCLASS;
