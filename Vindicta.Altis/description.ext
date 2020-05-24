@@ -170,7 +170,7 @@ class RscTitles {
 // https://community.bistudio.com/wiki/Description.ext#Corpse_.26_wreck_management
 
 // Sets the mode for corpse removal manager.
-corpseManagerMode = 1; // Leave it at 1
+corpseManagerMode = 0; // Leave it at 1
 
 // Corpse limit before which ( <= ) corpseRemovalMaxTime applies and after which ( > ) corpseRemovalMinTime applies.
 corpseLimit = 30;
