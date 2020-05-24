@@ -2,6 +2,12 @@
 #define OOP_DEBUG
 #include "common.h"
 
+CHVD_allowNoGrass = true;
+CHBN_adjustBrightness = 1;
+CHBN_adjustColor = [0.5,0.7,1];
+
+[] execVM "CHBN.sqf";
+
 // Most normal init code is handled in GameMode init functions.
 
 // Code which adds all objects to be edited by zeus
