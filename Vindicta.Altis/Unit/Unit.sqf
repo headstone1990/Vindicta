@@ -1492,6 +1492,8 @@ CLASS("Unit", ["Storable" ARG "GOAP_Agent"])
 			_hO addVest _vest;
 		};
 
+		_hO addItemToUniform "FirstAidKit";
+
 		// Add main gun
 		pr _primary = _gear#UNIT_GEAR_ID_PRIMARY;
 		if (_primary != "") then {
@@ -1557,7 +1559,6 @@ CLASS("Unit", ["Storable" ARG "GOAP_Agent"])
 				_hO selectWeapon _type;
 			};
 		};
-		_hO addItemToUniform "FirstAidKit";
 
 	ENDMETHOD;
 
