@@ -1,5 +1,4 @@
 #include "common.h"
-#include "CHVD\dialog.hpp"
 
 #include "config\global_config.hpp"
 
@@ -92,7 +91,6 @@ class Params {
 class CfgFunctions {
 	
 	#include "JeroenArsenal\functions.hpp"
-	#include "CHVD\CfgFunctions.hpp"
    
 	class vin
 	{
