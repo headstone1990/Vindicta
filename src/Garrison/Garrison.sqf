@@ -601,7 +601,7 @@ CLASS("Garrison", ["MessageReceiverEx" ARG "GOAP_Agent"]);
 					};
 					if (_index == -1) then {
 						// No players nearby
-						if (GAME_TIME - _lastTimeNearPlayer > 3600) then {
+						if (GAME_TIME - _lastTimeNearPlayer > 86400) then {
 							// Delete the vehicle
 							CALLM2(gMessageLoopMainManager, "postmethodAsync", "deleteObject", [_x]);
 						};
