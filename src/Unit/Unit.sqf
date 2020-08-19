@@ -1566,6 +1566,7 @@ CLASS("Unit", ["Storable" ARG "GOAP_Agent"])
 			pr _primaryMags = getArray (configfile >> "CfgWeapons" >> _primary >> "magazines");
 			pr _mag = _primaryMags select 0;
 			_hO addWeapon _primary;
+			_hO addItemToUniform "FirstAidKit";
 			for "_i" from 0 to 8 do { _hO addItemToVest _mag; };
 			for "_i" from 0 to 8 do { _hO addItemToUniform _mag; };
 			_hO addPrimaryWeaponItem _mag;
