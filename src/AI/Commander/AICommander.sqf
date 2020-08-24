@@ -3207,9 +3207,14 @@ http://patorjk.com/software/taag/#p=display&f=Univers&t=CMDR%20AI
 		#define __ADD_UTIL_SPEC_SAFE(array, amount, subcat, name) if ([_t, T_VEH, subcat, 0] call t_fnc_isValid) then { \
 			array pushback [amount, subcat, name]; \
 		}
+		if (_progressScaled < 0.3) then{
+			__ADD_UTIL_SPEC_SAFE(_utilitySpec, 2, T_VEH_car_unarmed, "unarmed cars");
+		} else {
+			__ADD_UTIL_SPEC_SAFE(_utilitySpec, 2, T_VEH_car_armed, "armed cars");
+		};
+
 		__ADD_UTIL_SPEC_SAFE(_utilitySpec, 2, T_VEH_truck_ammo, "supply trucks");
 		//__ADD_UTIL_SPEC_SAFE(_utilitySpec, 3, T_VEH_truck_inf, "infantry trucks");
-		__ADD_UTIL_SPEC_SAFE(_utilitySpec, 2, T_VEH_car_unarmed, "unarmed cars");
 
 		{
 			pr _reinfInfo0 = _x;
@@ -3243,11 +3248,11 @@ http://patorjk.com/software/taag/#p=display&f=Univers&t=CMDR%20AI
 
 		private _vehRatios = [
 			[T_VEH_truck_inf, 	0.2],
-			[T_VEH_car_armed, 	0.2],
+			//[T_VEH_car_armed, 	0.2 max (0.3 * (_progressScaled ^ 0.8)) min 1],
 			//T_VEH_APC, 			0 max (2 * (_progressScaled ^ 2)),
 			//T_VEH_IFV, 			0 max (3 * (_progressScaled ^ 3))
-			[T_VEH_MRAP_HMG, 	0.2],
-			[T_VEH_MRAP_GMG, 	0.2 max (0.3 * (_progressScaled ^ 0.8)) min 1],
+			[T_VEH_MRAP_HMG, 	0.2 max (_progressScaled ^ 0.8) min 1],
+			[T_VEH_MRAP_GMG, 	0.2 max (_progressScaled ^ 0.8) min 1],
 			[T_VEH_APC, 		0 max (2 * (_progressScaled ^ 2))],
 			[T_VEH_IFV, 		0 max (3 * (_progressScaled ^ 3))],
 			[T_VEH_MBT, 		0 max (4 * (_progressScaled ^ 4))]
