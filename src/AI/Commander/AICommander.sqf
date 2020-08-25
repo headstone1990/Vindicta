@@ -2871,7 +2871,7 @@ http://patorjk.com/software/taag/#p=display&f=Univers&t=CMDR%20AI
 
 		OOP_INFO_1("  More infantry required: %1", _infMoreRequired);
 
-		private _squadTypes = [T_GROUP_inf_assault_squad, T_GROUP_inf_rifle_squad];
+		private _squadTypes = [T_GROUP_inf_assault_squad, 4, T_GROUP_inf_rifle_squad, 4, T_GROUP_inf_recon_squad, 2];
 		OOP_INFO_1("  Trying to add %1 more infantry...", _infMoreRequired);
 
 		// Try to add recruits
@@ -2882,7 +2882,7 @@ http://patorjk.com/software/taag/#p=display&f=Univers&t=CMDR%20AI
 			_reinfDataThis params ["_activity", "_garActual", "_locActual", "_nearestRecruitCity", "_nInf", "_locMaxInf", "_availRecruits"];
 
 			// Select a random group type
-			private _subcatID = selectRandom _squadTypes;
+			private _subcatID = selectRandomWeighted _squadTypes;
 			private _countInfInGroup = count (_t#T_GROUP#_subcatID#0); // Amount of units
 
 			private _nGroups = floor (_availRecruits / _countInfInGroup);
