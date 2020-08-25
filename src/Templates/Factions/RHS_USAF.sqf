@@ -138,6 +138,8 @@ _cargo = +(tDefault select T_CARGO);
 
 //==== Groups ====
 _group = +(tDefault select T_GROUP);
+_group set [T_GROUP_inf_rifle_squad,	[[[T_INF, T_INF_SL], 	[T_INF, T_INF_TL], [T_INF, T_INF_LMG], [T_INF, T_INF_GL], [T_INF, T_INF_LAT], [T_INF, T_INF_marksman], 			[T_INF, T_INF_TL], [T_INF, T_INF_GL], [T_INF, T_INF_engineer], [T_INF, T_INF_marksman], [T_INF, T_INF_medic]]]];
+_group set [T_GROUP_inf_assault_squad,	[[[T_INF, T_INF_SL], 	[T_INF, T_INF_TL], [T_INF, T_INF_AT], [T_INF, T_INF_GL], [T_INF, T_INF_exp], [T_INF, T_INF_HMG],
 
 //==== Set arrays ====
 _array set [T_INF, _inf];
