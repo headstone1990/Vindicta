@@ -171,10 +171,10 @@ corpseManagerMode = 1; // Leave it at 1
 corpseLimit = 30;
 
 // Remove all bodies that have been dead longer than corpseRemovalMinTime when corpseLimit is reached.
-corpseRemovalMinTime = 60; // seconds. Default: 10
+corpseRemovalMinTime = 1800; // seconds. Default: 10
 
 // Maximum time a corpse can remain on the ground if total number of corpses is equal or under corpseLimit.
-corpseRemovalMaxTime = 600; // seconds. Default: 3600
+corpseRemovalMaxTime = 3600; // seconds. Default: 3600
 
 // Sets the mode for wreck removal manager.
 wreckManagerMode = 1; // Leave it at 1
