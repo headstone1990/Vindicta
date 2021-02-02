@@ -9,10 +9,6 @@ OnLoadMission = "Vindicta";
 allowFunctionsRecompile = 1;
 allowFunctionsLog = 1;
 
-// Name of the mission in the mission selection listbox
-// It has version in it so we generate it with teh build tool
-//#include "config\briefingName.hpp"
-
 overviewPicture = "\z\vindicta\addons\ui\pictures\overviewPicture.paa";
 overviewText = "Start from zero and liberate the territory from enemy occupation by using any means possible.";
 overviewTextLocked = "Start from zero and liberate the territory from enemy occupation by using any means possible.";
@@ -95,11 +91,11 @@ class CfgFunctions {
 	class vin
 	{
         #include "Common\functions.hpp"
-		class anything
+		class vindicta
 		{
 			class preInit {
 				preInit = 1;
-				file = "src\preInit.sqf";
+				file = QUOTE_COMMON_PATH(preInit.sqf);
 			};
 		};
 	};
@@ -168,13 +164,13 @@ class RscTitles {
 corpseManagerMode = 1; // Leave it at 1
 
 // Corpse limit before which ( <= ) corpseRemovalMaxTime applies and after which ( > ) corpseRemovalMinTime applies.
-corpseLimit = 30;
+corpseLimit = 50;
 
 // Remove all bodies that have been dead longer than corpseRemovalMinTime when corpseLimit is reached.
-corpseRemovalMinTime = 1800; // seconds. Default: 10
+corpseRemovalMinTime = 600; // seconds. Default: 10
 
 // Maximum time a corpse can remain on the ground if total number of corpses is equal or under corpseLimit.
-corpseRemovalMaxTime = 3600; // seconds. Default: 3600
+corpseRemovalMaxTime = 1200; // seconds. Default: 3600
 
 // Sets the mode for wreck removal manager.
 wreckManagerMode = 1; // Leave it at 1
@@ -189,12 +185,12 @@ wreckRemovalMinTime = 1800; // seconds. Default: 10
 wreckRemovalMaxTime = 7200; // seconds. Default: 36000 (10 hours)
 
 // The minimum distance between corpse or wreck and nearest player before the corpse or wreck is allowed to be removed by the garbage collector.
-minPlayerDistance = 100; // meters. Default: 0
+minPlayerDistance = 300; // meters. Default: 0
 
 // Custom loading display
 class Extended_DisplayLoad_EventHandlers {
     class RscDisplayLoading {
-        Mission_customLoadingScreen = "if (hasInterface) then {_this call compile preprocessFileLineNumbers 'src\loadDisplay.sqf';};";
+        Mission_customLoadingScreen = "if (hasInterface) then {_this call compile preprocessFileLineNumbers 'vindicta_missions\src\loadDisplay.sqf';};";
     };
 };
 

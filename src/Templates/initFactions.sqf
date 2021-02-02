@@ -30,6 +30,7 @@ private _classes = "isClass _x" configClasses (configFile >> "VinExternalFaction
     "Templates\Factions\LDF.sqf",
     "Templates\Factions\NATO.sqf", 	
     "Templates\Factions\NATOPacific.sqf", 	
+    "Templates\Factions\NATOWoodland.sqf",
     "Templates\Factions\CSAT.sqf", 
     "Templates\Factions\CSATPacific.sqf",	
     "Templates\Factions\RHS_AAF_2020.sqf",
@@ -38,7 +39,9 @@ private _classes = "isClass _x" configClasses (configFile >> "VinExternalFaction
     "Templates\Factions\RHS_LAF.sqf", 	
     "Templates\Factions\RHS_HIDF.sqf", 
     "Templates\Factions\RHS_AFRF.sqf", 
-    "Templates\Factions\RHS_USAF.sqf", 
+    "Templates\Factions\RHS_USAF.sqf",
+    "Templates\Factions\RHS_USAF_UCP.sqf", 
+	"Templates\Factions\RHS_USMC_W.sqf", 
     "Templates\Factions\RHS_CDF.sqf",	
     "Templates\Factions\CUP_TKA.sqf", 	
     "Templates\Factions\CUP_AFRF.sqf", 
@@ -49,10 +52,14 @@ private _classes = "isClass _x" configClasses (configFile >> "VinExternalFaction
     "Templates\Factions\DAF_Tan.sqf", 					
     "Templates\Factions\BWA.sqf",		
     "Templates\Factions\GM_WestGer.sqf",
+    "Templates\Factions\GM_EastGer.sqf",
     "Templates\Factions\RHS_BWMOD_BW_Fleck.sqf",
     "Templates\Factions\RHS_BWMOD_BW_Trop.sqf",
     "Templates\Factions\RHS_BWMOD_Niarms_BW_Fleck.sqf",
-    "Templates\Factions\RHS_BWMOD_Niarms_BW_Trop.sqf"
+    "Templates\Factions\RHS_BWMOD_Niarms_BW_Trop.sqf",
+    "Templates\Factions\NATOAAF.sqf",
+    "Templates\Factions\AAFCSAT.sqf",
+    "Templates\Factions\NATOCSAT.sqf"
 ];
 
 
@@ -80,6 +87,7 @@ private _classes = "isClass _x" configClasses (configFile >> "VinExternalFaction
     "Templates\Factions\CUP_RUS_Police.sqf",
     "Templates\Factions\GSG9.sqf",
     "Templates\Factions\GM_WestGer_Police.sqf",
+    "Templates\Factions\GM_EastGer_Police.sqf",
     "Templates\Factions\GEXP_Police.sqf",
     "Templates\Factions\3CB_TPD.sqf",
     "Templates\Factions\3CB_TPD_O.sqf",

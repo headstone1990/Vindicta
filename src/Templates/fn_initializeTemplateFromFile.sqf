@@ -24,7 +24,7 @@ if (isNil "_tName") exitWith {
 	diag_log format ["[Template] error: tempalte name was not specified for %1", _filePath];
 };
 
-diag_log format ["[Template] Initializing template from file: %1", _filePath];
+diag_log format ["[Template] Initializing template from file: %1, display name: %2", _filePath, _t select T_DISPLAY_NAME];
 
 // Check if description is provided
 private _tDescription = _t select T_DESCRIPTION;
@@ -83,7 +83,9 @@ _t set [T_VALID, _isValid];
 #ifndef _SQF_VM
 // Convert class names to numbers, so that t_fnc_numberToClassName can work later
 // Makes no use for tests with SQF VM
-[_t] call t_fnc_convertTemplateClassNamesToNumbers;
+if (_isValid) then {
+	[_t] call t_fnc_convertTemplateClassNamesToNumbers;
+};
 #endif
 
 // Process inventory items
